@@ -1,0 +1,101 @@
+
+cc_library(
+  name = "secp256k1",
+  hdrs = [
+    "include/secp256k1.h",
+    "include/secp256k1_recovery.h",
+  ],
+  srcs = [
+    "include/secp256k1.h",
+  ],
+
+  visibility = ["//visibility:public"],
+)
+
+
+
+cc_library(
+    name = "libsecp256k1",
+    deps = [
+      "secp256k1"
+    ],
+    hdrs = [
+        "src/include/secp256k1.h",
+        "src/basic-config.h",
+        "src/bench.h",
+        "src/ecdsa.h",
+        "src/ecdsa_impl.h",
+        "src/eckey.h",
+        "src/eckey_impl.h",
+        "src/ecmult.h",
+        "src/ecmult_const.h",
+        "src/ecmult_const_impl.h",
+        "src/ecmult_gen.h",
+        "src/ecmult_gen_impl.h",
+        "src/ecmult_impl.h",
+        "src/field.h",
+        "src/field_10x26.h",
+        "src/field_10x26_impl.h",
+        "src/field_5x52.h",
+        "src/field_5x52_asm_impl.h",
+        "src/field_5x52_impl.h",
+        "src/field_5x52_int128_impl.h",
+        "src/field_impl.h",
+        "src/group.h",
+        "src/group_impl.h",
+        "src/hash.h",
+        "src/hash_impl.h",
+        "src/num.h",
+        "src/num_gmp.h",
+        "src/num_gmp_impl.h",
+        "src/num_impl.h",
+        "src/scalar.h",
+        "src/scalar_4x64.h",
+        "src/scalar_4x64_impl.h",
+        "src/scalar_8x32.h",
+        "src/scalar_8x32_impl.h",
+        "src/scalar_impl.h",
+        "src/scalar_low.h",
+        "src/scalar_low_impl.h",
+        "src/testrand.h",
+        "src/testrand_impl.h",
+        "src/util.h",
+        "src/secp256k1.c",
+        "src/modules/recovery/main_impl.h",
+    ],
+    srcs = [
+        "src/include/secp256k1.h",
+        "src/secp256k1.c",
+    ],
+    copts = [
+
+        "-Wall",
+        "-Wextra",
+        "-Wno-unused-function",
+        "-lsecp256k1",
+        "-D USE_SCALAR_8X32",
+        "-D USE_NUM_NONE",
+        "-D USE_FIELD_INV_BUILTIN",
+        "-D USE_SCALAR_INV_BUILTIN",
+        "-D USE_FIELD_10X26",
+        "-D SECP256K1_BUILD",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+
+# Goes through genrule() to emulate prebuilt .so in srcs of cc_library.
+#genrule(
+#    name = "copy_c_version",
+#    srcs = [":c_version_orig"],
+#    outs = ["libc_version.so"],
+#    cmd = "cp \"$$(find $(SRCS) -name '*.so')\" $@",
+#    output_to_bindir = 1,
+#)
+
+#cc_library(
+#    name = "c_version_wrap",
+#    srcs = ["libc_version.so"],
+#    hdrs = ["c_version.h"],
+#)
+
