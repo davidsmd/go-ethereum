@@ -26,12 +26,12 @@ import (
 	"io"
 	"math/big"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/core/rawdb"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/crypto/secp256k1"
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/davidsmd/go-ethereum/common"
+	"github.com/davidsmd/go-ethereum/core"
+	"github.com/davidsmd/go-ethereum/core/rawdb"
+	"github.com/davidsmd/go-ethereum/crypto"
+	"github.com/davidsmd/go-ethereum/crypto/secp256k1"
+	"github.com/davidsmd/go-ethereum/rlp"
 )
 
 // Constants to match up protocol versions and messages

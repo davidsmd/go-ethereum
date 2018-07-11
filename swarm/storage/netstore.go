@@ -19,7 +19,7 @@ package storage
 import (
 	"time"
 
-	"github.com/ethereum/go-ethereum/swarm/log"
+	"github.com/davidsmd/go-ethereum/swarm/log"
 )
 
 var (

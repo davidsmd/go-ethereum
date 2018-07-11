@@ -5,12 +5,12 @@ package eth
 import (
 	"math/big"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/hexutil"
-	"github.com/ethereum/go-ethereum/consensus/ethash"
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/eth/downloader"
-	"github.com/ethereum/go-ethereum/eth/gasprice"
+	"github.com/davidsmd/go-ethereum/common"
+	"github.com/davidsmd/go-ethereum/common/hexutil"
+	"github.com/davidsmd/go-ethereum/consensus/ethash"
+	"github.com/davidsmd/go-ethereum/core"
+	"github.com/davidsmd/go-ethereum/eth/downloader"
+	"github.com/davidsmd/go-ethereum/eth/gasprice"
 )
 
 var _ = (*configMarshaling)(nil)

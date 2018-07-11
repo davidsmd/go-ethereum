@@ -30,17 +30,17 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ethereum/go-ethereum/accounts/abi/bind"
-	"github.com/ethereum/go-ethereum/accounts/abi/bind/backends"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/contracts/ens"
-	"github.com/ethereum/go-ethereum/contracts/ens/contract"
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/swarm/multihash"
-	"github.com/ethereum/go-ethereum/swarm/storage"
+	"github.com/davidsmd/go-ethereum/accounts/abi/bind"
+	"github.com/davidsmd/go-ethereum/accounts/abi/bind/backends"
+	"github.com/davidsmd/go-ethereum/common"
+	"github.com/davidsmd/go-ethereum/contracts/ens"
+	"github.com/davidsmd/go-ethereum/contracts/ens/contract"
+	"github.com/davidsmd/go-ethereum/core"
+	"github.com/davidsmd/go-ethereum/core/types"
+	"github.com/davidsmd/go-ethereum/crypto"
+	"github.com/davidsmd/go-ethereum/log"
+	"github.com/davidsmd/go-ethereum/swarm/multihash"
+	"github.com/davidsmd/go-ethereum/swarm/storage"
 )
 
 var (

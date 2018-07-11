@@ -20,12 +20,12 @@ import (
 	"errors"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/metrics"
-	"github.com/ethereum/go-ethereum/p2p/discover"
-	"github.com/ethereum/go-ethereum/swarm/log"
-	"github.com/ethereum/go-ethereum/swarm/network"
-	"github.com/ethereum/go-ethereum/swarm/storage"
+	"github.com/davidsmd/go-ethereum/common"
+	"github.com/davidsmd/go-ethereum/metrics"
+	"github.com/davidsmd/go-ethereum/p2p/discover"
+	"github.com/davidsmd/go-ethereum/swarm/log"
+	"github.com/davidsmd/go-ethereum/swarm/network"
+	"github.com/davidsmd/go-ethereum/swarm/storage"
 )
 
 const (

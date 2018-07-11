@@ -12,7 +12,7 @@ go_library(
         "optate.go",
         "twist.go",
     ],
-    importpath = "github.com/ethereum/go-ethereum/crypto/bn256",
+    importpath = "github.com/davidsmd/go-ethereum/crypto/bn256",
     visibility = ["//visibility:public"],
 )
 
@@ -24,5 +24,5 @@ go_test(
         "main_test.go",
     ],
     embed = [":go_default_library"],
-    importpath = "github.com/ethereum/go-ethereum/crypto/bn256",
+    importpath = "github.com/davidsmd/go-ethereum/crypto/bn256",
 )

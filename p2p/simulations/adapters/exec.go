@@ -34,12 +34,12 @@ import (
 	"syscall"
 	"time"
 
+	"github.com/davidsmd/go-ethereum/log"
+	"github.com/davidsmd/go-ethereum/node"
+	"github.com/davidsmd/go-ethereum/p2p"
+	"github.com/davidsmd/go-ethereum/p2p/discover"
+	"github.com/davidsmd/go-ethereum/rpc"
 	"github.com/docker/docker/pkg/reexec"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/node"
-	"github.com/ethereum/go-ethereum/p2p"
-	"github.com/ethereum/go-ethereum/p2p/discover"
-	"github.com/ethereum/go-ethereum/rpc"
 	"golang.org/x/net/websocket"
 )
 

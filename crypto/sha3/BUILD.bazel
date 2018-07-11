@@ -61,7 +61,7 @@ go_library(
         ],
         "//conditions:default": [],
     }),
-    importpath = "github.com/ethereum/go-ethereum/crypto/sha3",
+    importpath = "github.com/davidsmd/go-ethereum/crypto/sha3",
     visibility = ["//visibility:public"],
 )
 
@@ -70,5 +70,5 @@ go_test(
     srcs = ["sha3_test.go"],
     data = glob(["testdata/**"]),
     embed = [":go_default_library"],
-    importpath = "github.com/ethereum/go-ethereum/crypto/sha3",
+    importpath = "github.com/davidsmd/go-ethereum/crypto/sha3",
 )
