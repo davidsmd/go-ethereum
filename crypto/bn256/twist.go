@@ -76,13 +76,7 @@ func (c *twistPoint) IsOnCurve() bool {
 	yy.Sub(yy, xxx)
 	yy.Sub(yy, twistB)
 	yy.Minimal()
-
-	if yy.x.Sign() != 0 || yy.y.Sign() != 0 {
-		return false
-	}
-	cneg := newTwistPoint(pool)
-	cneg.Mul(c, Order, pool)
-	return cneg.z.IsZero()
+	return yy.x.Sign() == 0 && yy.y.Sign() == 0
 }
 
 func (c *twistPoint) SetInfinity() {

@@ -1,0 +1,37 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library", "go_test", "cgo_library")
+
+
+
+
+go_library(
+    name = "go_default_library",
+    srcs = [
+        "curve.go",
+        "ext.h",
+        "panic_cb.go",
+        "secp256.go",
+    ],
+
+    cdeps = [
+        "//vendor/github.com/ethereum/go-ethereum/crypto/secp256k1/libsecp256k1:secp256k1",
+        "//vendor/github.com/ethereum/go-ethereum/crypto/secp256k1/libsecp256k1:libsecp256k1",
+    ],
+
+    cgo = True,
+    copts = [
+        "-Ivendor/github.com/ethereum/go-ethereum/crypto/secp256k1/libsecp256k1",
+        "-Ivendor/github.com/ethereum/go-ethereum/crypto/secp256k1/libsecp256k1/src",
+    ],
+    visibility = ["//visibility:public"],
+    deps = ["//vendor/github.com/ethereum/go-ethereum/common/math:go_default_library"],
+)
+
+go_test(
+    name = "go_default_test",
+    srcs = ["secp256_test.go"],
+    library = ":go_default_library",
+    deps = [
+        "//vendor/github.com/ethereum/go-ethereum/common/math:go_default_library",
+        "//vendor/github.com/ethereum/go-ethereum/crypto/randentropy:go_default_library",
+    ],
+)
