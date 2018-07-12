@@ -9,7 +9,7 @@ go_library(
         "secp256.go",
     ],
     cdeps = [
-        "//crypto/secp256k1/libsecp256k1:secp256k1",
+        "//crypto/secp256k1/libsecp256k1",
     ],
     cgo = True,
     copts = [
