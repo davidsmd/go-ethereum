@@ -22,9 +22,9 @@ import (
 	"errors"
 	"time"
 
-	"github.com/ethereum/go-ethereum/p2p"
-	"github.com/ethereum/go-ethereum/p2p/protocols"
-	"github.com/ethereum/go-ethereum/swarm/log"
+	"github.com/davidsmd/go-ethereum/p2p"
+	"github.com/davidsmd/go-ethereum/p2p/protocols"
+	"github.com/davidsmd/go-ethereum/swarm/log"
 )
 
 // Generic ping protocol implementation for

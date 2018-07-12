@@ -32,12 +32,12 @@ import (
 	"sync/atomic"
 	"time"
 
+	"github.com/davidsmd/go-ethereum/log"
+	"github.com/davidsmd/go-ethereum/metrics"
+	"github.com/davidsmd/go-ethereum/p2p"
+	"github.com/davidsmd/go-ethereum/params"
+	"github.com/davidsmd/go-ethereum/rpc"
 	"github.com/elastic/gosigar"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/metrics"
-	"github.com/ethereum/go-ethereum/p2p"
-	"github.com/ethereum/go-ethereum/params"
-	"github.com/ethereum/go-ethereum/rpc"
 	"golang.org/x/net/websocket"
 )
 
